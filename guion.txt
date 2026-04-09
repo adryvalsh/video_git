@@ -1,0 +1,45 @@
+Ahora vamos a resolver un conflicto en el cual un archivo es borrado desde una 
+rama y a su vez modificado desde otra rama. En este  momento estamos en la rama principal
+y hemos borrado un archivo y vamos a ver que lo tenemos en otra rama que se llama rama2
+podemos ver que el archivo copia anteriormente no estaba y aca lo podemos ver en esta rama
+vamos a realizarle a este archivo una modificacion y vamos a hacer un git commit
+ahora nos vamos a mover a la rama principal y vamos a realizar un merge para unificar la rama2 
+con la rama main. Aca ya salta el conflicto indicando que el archivo copia.html fue borrado en esta 
+rama pero esta modificado en la rama2
+Vamos a solucionar el conflicto realizando un merge indicando que quweremos que se realice la copia 
+del archivo copia.html de rama2 en main , el editor de visual nos da la posibilidad de mantener 
+la version es decir mantener el archivo o borrarlo y continuar con el merge, seleccionamos mantenerlo,
+vamos a continuar y aca se van a sincronizar los cambios, le damos ok y ahora si vemos que estamos 
+en la rama principal podemos ver que ademas tenemos ya el archivo copia.html en etsa rama tambien 
+y hemos resuelto asi el conflicto.
+---------------------------------------------- 
+copia.html no esta en la rama master pero si en rama2
+
+modificamos copia.html desde rama2
+
+hacemos commit
+
+hacemos merge con la rama master
+
+vemos que se crea un conflicto
+
+decidimos mantener el cambio realizado
+
+sincronizamos el cambio
+
+hemos resuelto el conflicto
+
+
+git checkout rama2
+
+git add .
+
+git commit -m "modificamos copia en rama2"
+
+git checkout master
+
+git merge rama2
+
+git merge rama2 master
+
+git status
